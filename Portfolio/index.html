@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#202c33">
+    <title>Shaqib Khan - Portfolio Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="profile-info">
+                <div class="avatar">
+                    <img src="profile.jpg" alt="Shaqib Khan" class="profile-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
+                </div>
+                <div class="header-text">
+                    <h3>Shaqib Khan</h3>
+                    <span class="status">CS Student & Developer</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="dropdown">
+                    <i class="fas fa-ellipsis-v dropdown-toggle" id="menuToggle"></i>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <button class="dropdown-item" id="clearChat">
+                            <i class="fas fa-trash"></i>
+                            Clear All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    S
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <p>Hey! Welcome to My Portfolio!</p>
+                        <p>Pick one option below to get started:</p>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Chat Input Area -->
+        <div class="chat-input">
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off">
+                <button id="sendBtn" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div class="typing-indicator" id="typingIndicator">
+        <div class="message bot-message">
+            <div class="message-avatar">
+                S
+            </div>
+            <div class="message-content">
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
